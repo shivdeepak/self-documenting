@@ -1,6 +1,11 @@
-# self-documenting
+# Build Self-documenting projects
 
-A Cursor [Agent Skill](https://docs.cursor.com/) that keeps a project's documentation in sync with its code. When an AI agent makes a change, this skill prompts it to update the relevant docs in the **same** change so documentation never drifts from reality.
+A Cursor Agent Skill that keeps a project's docs in sync with its code. Agents update
+the relevant docs in the **same** change, so documentation never drifts from reality.
+
+Those docs then become a map: agents read them to understand the project and make changes
+the intended way. And because docs are split by topic behind an `index.md`, agents read
+only what they need—saving context and tokens.
 
 ## Installation
 
