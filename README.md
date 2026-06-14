@@ -19,3 +19,5 @@ The skill is defined in [`SKILL.md`](SKILL.md). Its frontmatter `description` te
 ## Usage
 
 Place this skill where your agent discovers skills (e.g. `~/.cursor/skills/` or a project's `.cursor/skills/`). The agent reads `SKILL.md` and follows it automatically after qualifying changes—no manual invocation required.
+
+To make the workflow trigger automatically in another project, copy [`.cursor/rules/self-documenting.mdc`](.cursor/rules/self-documenting.mdc) into that project's `.cursor/rules/`. The rule is `alwaysApply: true`, so the agent invokes the skill after every qualifying change request.

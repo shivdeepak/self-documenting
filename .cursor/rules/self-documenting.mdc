@@ -1,0 +1,10 @@
+---
+description: Trigger the self-documenting workflow after every change request
+alwaysApply: true
+---
+
+# Self-Documenting
+
+After fulfilling any change request that alters behavior, config, commands, APIs,
+or project structure, follow the `self-documenting` skill to update the relevant
+documentation in the same change.
