@@ -4,11 +4,15 @@ A Cursor [Agent Skill](https://docs.cursor.com/) that keeps a project's document
 
 ## Installation
 
+### User-level (Recommended)
+
 Install the skill and trigger rule at the **user level** (`~/.cursor/`) with a single command:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/shivdeepak/self-documenting/main/install.sh | bash
 ```
+
+### Project-level
 
 To install into a specific project's `.cursor/` instead of the user level, append `--project`:
 
