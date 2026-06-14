@@ -37,10 +37,9 @@ The skill activates after an agent fulfills any request that adds, removes, or a
 
 ## How it works
 
-The skill is defined in [`SKILL.md`](SKILL.md). Its frontmatter `description` tells the agent when to invoke it; the body provides the workflow, the list of what to update, and the guiding principles.
+The installer places two files in your `.cursor/`:
 
-## Usage
+- [`SKILL.md`](SKILL.md) — the skill itself. Its frontmatter `description` tells the agent when to invoke it; the body holds the workflow, what to update, and the guiding principles.
+- [`.cursor/rules/self-documenting.mdc`](.cursor/rules/self-documenting.mdc) — a trigger rule with `alwaysApply: true` that makes the agent invoke the skill after every qualifying change.
 
-Place this skill where your agent discovers skills (e.g. `~/.cursor/skills/` or a project's `.cursor/skills/`). The agent reads `SKILL.md` and follows it automatically after qualifying changes—no manual invocation required.
-
-To make the workflow trigger automatically in another project, copy [`.cursor/rules/self-documenting.mdc`](.cursor/rules/self-documenting.mdc) into that project's `.cursor/rules/`. The rule is `alwaysApply: true`, so the agent invokes the skill after every qualifying change request.
+With both in place, the agent updates docs automatically after qualifying changes—no manual invocation required. Restart or reload Cursor after installing to pick them up.
