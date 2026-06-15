@@ -3,7 +3,7 @@ name: self-documenting
 description: Keep a project self-documenting by updating docs alongside code. Use after any change that adds, removes, or alters behavior, config, commands, APIs, or project structure.
 license: MIT
 metadata:
-  version: "1.1.0" # x-release-please-version
+  version: "1.1.1" # x-release-please-version
 ---
 
 # Self-Documenting Project
