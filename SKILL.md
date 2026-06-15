@@ -46,12 +46,12 @@ If the change concerns a topic no existing doc covers:
 2. Add an entry for it in the nearest `index.md`.
 3. Keep it scoped to the topic — one concern per file.
 
-## Prefer an index over large files (context efficiency)
+## Prefer an index over large files (progressive disclosure)
 
 Each docs directory (e.g. `.ai/`, `docs/`) should have an `index.md` that lists the
-topics covered and the specific file describing each topic. This lets an agent read
-the `index.md` first, then open only the file(s) it needs — instead of reading every
-doc and burning context.
+topics covered and the specific file describing each topic. This enables **progressive
+disclosure**: an agent reads the `index.md` first, then opens only the file(s) it needs —
+instead of reading every doc and burning context and tokens.
 
 - When reading docs: read `index.md` first, then jump to the relevant file(s) only.
 - When writing docs: split by topic into separate files; keep each file focused.

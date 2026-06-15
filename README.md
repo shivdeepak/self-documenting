@@ -4,8 +4,8 @@ A Cursor Agent Skill that keeps a project's docs in sync with its code. Agents u
 the relevant docs in the **same** change, so documentation never drifts from reality.
 
 Those docs then become a map: agents read them to understand the project and make changes
-the intended way. And because docs are split by topic behind an `index.md`, agents read
-only what they need—saving context and tokens.
+the intended way. And because docs are split by topic behind an `index.md`, this skill uses
+**progressive disclosure** — agents read only what they need—saving context and tokens.
 
 ## Installation
 
