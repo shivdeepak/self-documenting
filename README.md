@@ -11,6 +11,8 @@ they need—saving context and tokens.
 
 ## Installation
 
+### Option 1 — skillship (recommended)
+
 Install across Cursor, Claude Code, Claude Web, and Claude Cowork using
 [skillship](https://github.com/shivdeepak/skillship):
 
@@ -30,6 +32,22 @@ npx skillship package self-documenting
 #   Claude Web: Settings -> Capabilities -> Upload skill -> enable toggle
 #   Claude Cowork: Customize -> Skills -> Upload (desktop app only)
 ```
+
+### Option 2 — npx skills
+
+Install the skill into your project using the
+[skills CLI](https://skills.sh):
+
+```bash
+npx skills add shivdeepak/self-documenting
+```
+
+This copies the skill into `.agents/skills/self-documenting/` (Cursor picks it
+up automatically). Re-run the command to update to the latest version.
+
+> **Note:** `npx skills` installs the skill file only. It does not install the
+> Cursor trigger rule or hooks. Use Option 1 (skillship) to get those placed
+> automatically.
 
 ## What it does
 
