@@ -1,11 +1,15 @@
 ---
 name: self-documenting
-description: Keep a project self-documenting by updating docs alongside code on every change. Use after fulfilling any change request that adds, removes, or alters behavior, config, commands, APIs, or project structure.
+description: Keep a project self-documenting by updating docs alongside code. Use after any change that adds, removes, or alters behavior, config, commands, APIs, or project structure.
+license: MIT
+metadata:
+  version: "1.0.0" # x-release-please-version
 ---
 
 # Self-Documenting Project
 
-After making code changes for a request, update the project's documentation in the **same** change so docs never drift from reality.
+After making code changes for a request, update the project's documentation in
+the **same** change so docs never drift from reality.
 
 ## Workflow
 
@@ -25,16 +29,22 @@ After completing the change, run this checklist:
 
 Update whichever of these the change touches:
 
-- **README / getting-started**: setup steps, prerequisites, usage examples, commands.
-- **Agent guides** (`AGENTS.md`, `CLAUDE.md`, `.ai/`, `.cursor/rules/`): layout, conventions, workflows.
-- **API / interface docs**: signatures, params, return values, env vars, config keys.
+- **README / getting-started**: setup steps, prerequisites, usage examples,
+  commands.
+- **Agent guides** (`AGENTS.md`, `CLAUDE.md`, `.ai/`, `.cursor/rules/`): layout,
+  conventions, workflows.
+- **API / interface docs**: signatures, params, return values, env vars, config
+  keys.
 - **Architecture notes**: new components, data flow, removed modules.
-- **Inline docs**: docstrings or comments only for non-obvious intent, trade-offs, or constraints — never narrate what the code plainly does.
+- **Inline docs**: docstrings or comments only for non-obvious intent,
+  trade-offs, or constraints — never narrate what the code plainly does.
 
 ## Bootstrapping docs when none exist
 
-If the project has no docs directory, create one (`.ai/` for agent guides, or `docs/`
-matching the project's convention) and seed it with an `index.md` (see below). Add
+If the project has no docs directory, create one (`.ai/` for agent guides, or
+`docs/`
+matching the project's convention) and seed it with an `index.md` (see below).
+Add
 the minimal doc the current change requires — do not back-fill documentation for
 unrelated parts of the codebase.
 
@@ -48,14 +58,19 @@ If the change concerns a topic no existing doc covers:
 
 ## Prefer an index over large files (progressive disclosure)
 
-Each docs directory (e.g. `.ai/`, `docs/`) should have an `index.md` that lists the
-topics covered and the specific file describing each topic. This enables **progressive
-disclosure**: an agent reads the `index.md` first, then opens only the file(s) it needs —
+Each docs directory (e.g. `.ai/`, `docs/`) should have an `index.md` that lists
+the
+topics covered and the specific file describing each topic. This enables
+**progressive
+disclosure**: an agent reads the `index.md` first, then opens only the file(s)
+it needs —
 instead of reading every doc and burning context and tokens.
 
-- When reading docs: read `index.md` first, then jump to the relevant file(s) only.
+- When reading docs: read `index.md` first, then jump to the relevant file(s)
+  only.
 - When writing docs: split by topic into separate files; keep each file focused.
-- After adding/removing/renaming a doc, update the directory's `index.md` to match.
+- After adding/removing/renaming a doc, update the directory's `index.md` to
+  match.
 
 Example `index.md`:
 
@@ -74,6 +89,7 @@ Example `index.md`:
 - Documentation changes ship in the same commit/PR as the code.
 - Prefer updating an existing doc over creating a new file.
 - Split docs by topic and link them from an `index.md`; avoid one giant file.
-- If a change makes a doc obsolete, delete or correct it (and update `index.md`).
+- If a change makes a doc obsolete, delete or correct it (and update
+  `index.md`).
 - Keep it concise; match the project's existing doc style.
 - If no docs are affected, do nothing — don't invent documentation.

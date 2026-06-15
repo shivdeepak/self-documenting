@@ -138,7 +138,7 @@ else
 fi
 
 # --- install ----------------------------------------------------------------
-fetch "SKILL.md" "$SKILL_DEST"
+fetch "self-documenting/SKILL.md" "$SKILL_DEST"
 ok "Installed skill"
 fetch ".cursor/rules/self-documenting.mdc" "$RULE_DEST"
 ok "Installed rule"

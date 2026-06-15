@@ -1,0 +1,11 @@
+---
+description: self-documenting skill guidance
+alwaysApply: false
+---
+
+# self-documenting
+
+This rule points the agent at the `self-documenting` Agent Skill.
+
+Read `self-documenting/SKILL.md` and follow its instructions when the task matches the
+skill's description.
