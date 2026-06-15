@@ -24,14 +24,10 @@ This installs the skill, the Cursor trigger rule, and any hooks in one step.
 For Cursor specifically, it copies `cursor/rules/self-documenting.mdc` to
 `~/.cursor/rules/` automatically — no manual file copying required.
 
-For Claude Web / Cowork, package and upload manually:
-
-```bash
-npx skillship package self-documenting
-# Then upload dist/self-documenting.skill in the Claude interface
-#   Claude Web: Settings -> Capabilities -> Upload skill -> enable toggle
-#   Claude Cowork: Customize -> Skills -> Upload (desktop app only)
-```
+For Claude Web / Cowork, download the latest `self-documenting.skill` from the
+[releases page](https://github.com/shivdeepak/self-documenting/releases), then
+upload it via the Claude desktop app (Customize → Skills → Upload). Once
+uploaded, the skill becomes available in Claude Web automatically.
 
 ### Option 2 — npx skills
 
