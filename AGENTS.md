@@ -7,10 +7,10 @@ Claude Code, Claude Web, and Claude Cowork.
 ## Layout
 
 - `self-documenting/SKILL.md` — the skill itself (source of truth).
-- `snippets/cursor-rule.mdc` — Cursor rule snippet for triggering the skill.
-- `snippets/claude-md.md` — Claude CLAUDE.md/AGENTS.md snippet for triggering
-  the skill.
-- `install.sh` — standalone installer for Cursor (user or project level).
+- `cursor/rules/self-documenting.mdc` — Cursor rule; auto-installed by
+  `skillship install -a cursor`.
+- `cursor/hooks.json` — Cursor hook entries; merged into `~/.cursor/hooks.json`
+  on install.
 - `release-please-config.json`, `.release-please-manifest.json`, `version.txt` —
   release automation via release-please + Conventional Commits.
 - `.github/workflows/validate.yml` — validates the skill on PRs/pushes.

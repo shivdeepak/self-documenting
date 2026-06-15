@@ -1,19 +1,15 @@
 # Build Self-documenting projects
 
-An [Agent Skill](https://agentskills.io/specification) that keeps a project's docs 
-in sync with its code. Agents update the relevant docs in the **same** change, so
-documentation never drifts from reality.
+An [Agent Skill](https://agentskills.io/specification) that keeps a project's
+docs in sync with its code. Agents update the relevant docs in the **same**
+change, so documentation never drifts from reality.
 
 Those docs then become a map: agents read them to understand the project and
-make changes
-the intended way. And because docs are split by topic behind an `index.md`, this
-skill uses
-**progressive disclosure** — agents read only what they need—saving context and
-tokens.
+make changes the intended way. And because docs are split by topic behind an
+`index.md`, this skill uses **progressive disclosure** — agents read only what
+they need—saving context and tokens.
 
 ## Installation
-
-### Via skillship (all surfaces)
 
 Install across Cursor, Claude Code, Claude Web, and Claude Cowork using
 [skillship](https://github.com/shivdeepak/skillship):
@@ -22,27 +18,17 @@ Install across Cursor, Claude Code, Claude Web, and Claude Cowork using
 npx skillship install self-documenting -a cursor,claude-code
 ```
 
+This installs the skill, the Cursor trigger rule, and any hooks in one step.
+For Cursor specifically, it copies `cursor/rules/self-documenting.mdc` to
+`~/.cursor/rules/` automatically — no manual file copying required.
+
 For Claude Web / Cowork, package and upload manually:
 
 ```bash
 npx skillship package self-documenting
 # Then upload dist/self-documenting.skill in the Claude interface
-```
-
-### Via install.sh (Cursor only)
-
-Install the skill and trigger rule at the **user level** (`~/.cursor/`) with a
-single command:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/shivdeepak/self-documenting/main/install.sh | bash
-```
-
-To install into a specific project's `.cursor/` instead of the user level,
-append `--project`:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/shivdeepak/self-documenting/main/install.sh | bash -s -- --project
+#   Claude Web: Settings -> Capabilities -> Upload skill -> enable toggle
+#   Claude Cowork: Customize -> Skills -> Upload (desktop app only)
 ```
 
 ## What it does
@@ -63,14 +49,13 @@ agent to:
 
 ## How it works
 
-The installer places two files in your `.cursor/`:
+`skillship install -a cursor` places two files in `~/.cursor/`:
 
-- [`self-documenting/SKILL.md`](self-documenting/SKILL.md) — the skill itself.
-  Its frontmatter `description` tells the agent when to invoke it; the body
-  holds the workflow, what to update, and the guiding principles.
-- [`.cursor/rules/self-documenting.mdc`](.cursor/rules/self-documenting.mdc) — a
-  trigger rule with `alwaysApply: true` that makes the agent invoke the skill
-  after every qualifying change.
+- `skills/self-documenting/SKILL.md` — the skill itself. Its frontmatter
+  `description` tells the agent when to invoke it; the body holds the workflow,
+  what to update, and the guiding principles.
+- `rules/self-documenting.mdc` — a trigger rule that makes the agent invoke the
+  skill after every qualifying change.
 
 With both in place, the agent updates docs automatically after qualifying
 changes—no manual invocation required. Restart or reload Cursor after installing
@@ -86,10 +71,9 @@ npx skillship package self-documenting                  # build .skill archive
 ## Layout
 
 ```
-self-documenting/SKILL.md        — the skill (source of truth)
-snippets/cursor-rule.mdc         — Cursor rule snippet
-snippets/claude-md.md            — Claude AGENTS.md/CLAUDE.md snippet
-install.sh                       — standalone Cursor installer
-.github/workflows/validate.yml   — CI validation
-.github/workflows/release.yml    — automated releases via release-please
+self-documenting/SKILL.md              — the skill (source of truth)
+cursor/rules/self-documenting.mdc      — Cursor rule (auto-installed by skillship)
+cursor/hooks.json                      — Cursor hooks to merge (auto-installed by skillship)
+.github/workflows/validate.yml         — CI validation
+.github/workflows/release.yml          — automated releases via release-please
 ```
