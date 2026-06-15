@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.2](https://github.com/shivdeepak/self-documenting/compare/v1.1.1...v1.1.2) (2026-06-15)
+
+
+### Documentation
+
+* update skillship install command to use full repo path ([247bc0e](https://github.com/shivdeepak/self-documenting/commit/247bc0e8dd842a6123addbc08edfb34a36527004))
+* use npx skillship@latest in all commands ([2921a07](https://github.com/shivdeepak/self-documenting/commit/2921a07c5cbbbfd354e57db0d9309f2d74a02152))
+
 ## [1.1.1](https://github.com/shivdeepak/self-documenting/compare/v1.1.0...v1.1.1) (2026-06-15)
 
 
