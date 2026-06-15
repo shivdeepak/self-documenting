@@ -17,7 +17,7 @@ Install across Cursor, Claude Code, Claude Web, and Claude Cowork using
 [skillship](https://github.com/shivdeepak/skillship):
 
 ```bash
-npx skillship install self-documenting -a cursor,claude-code
+npx skillship install shivdeepak/self-documenting -a cursor -a claude-code
 ```
 
 This installs the skill, the Cursor trigger rule, and any hooks in one step.
