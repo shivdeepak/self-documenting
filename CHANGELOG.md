@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/shivdeepak/self-documenting/compare/v1.1.2...v1.2.0) (2026-06-16)
+
+
+### Features
+
+* add self-documenting skill and plugin configuration ([88dca13](https://github.com/shivdeepak/self-documenting/commit/88dca13d42872325f17fcc51f24eaa675c59594b))
+
 ## [1.1.2](https://github.com/shivdeepak/self-documenting/compare/v1.1.1...v1.1.2) (2026-06-15)
 
 
