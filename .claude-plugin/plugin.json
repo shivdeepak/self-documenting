@@ -1,0 +1,7 @@
+{
+  "name": "self-documenting",
+  "description": "Keeps a project self-documenting by updating docs alongside code — triggered by any change that adds, removes, or alters behavior.",
+  "author": {
+    "name": "Shiv Deepak"
+  }
+}
