@@ -30,6 +30,6 @@ Claude Code, Claude Web, and Claude Cowork.
 
 ## Commands
 
-- `npx skillship validate self-documenting --profile all`
-- `npx skillship package self-documenting`
-- `npx skillship install self-documenting -a cursor,claude-code`
+- `npx skillship@latest validate self-documenting --profile all`
+- `npx skillship@latest package self-documenting`
+- `npx skillship@latest install self-documenting -a cursor,claude-code`
