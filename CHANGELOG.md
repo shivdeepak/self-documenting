@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/shivdeepak/self-documenting/compare/v1.2.0...v1.2.1) (2026-06-16)
+
+
+### Bug Fixes
+
+* update skillship commands to use latest version ([ef40a4f](https://github.com/shivdeepak/self-documenting/commit/ef40a4f44d051ebbd5e1694919225a05c37f52be))
+
 ## [1.2.0](https://github.com/shivdeepak/self-documenting/compare/v1.1.2...v1.2.0) (2026-06-16)
 
 
